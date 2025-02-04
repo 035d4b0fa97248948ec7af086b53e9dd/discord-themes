@@ -1,0 +1,38 @@
+/**
+ * @name FEI
+ * @description change server folder icons
+*/
+
+.wrapper_ef3116.guilds_c48ade > .tree_ef3116 > .itemsContainer_ef3116 > .scroller_ef3116.scrollerBase_d125d2 > [aria-label="Servers"] {
+  & > :nth-child(4) {
+    --folder-emoji-icon: var(--folder-emoji-icon);
+  }
+
+  & [aria-owns^="folder-items-"] {
+    background-color: transparent;
+
+    & > .folderIconWrapper__48112 {
+      background-color: var(--background-primary) !important;
+
+      .closedFolderIconWrapper__48112,
+      .expandedFolderIconWrapper__48112 {
+        display: none;
+      }
+
+      &::after {
+        text-align: center;
+        position: absolute;
+        content: "🤓";
+        top: 12px;
+        left: 8px;
+        font-size: 24px;
+        pointer-events: none;
+      }
+
+      &:hover {
+        outline: solid 24px #ffffff0f;
+        outline-offset: -24px;
+      }
+    }
+  }
+}
